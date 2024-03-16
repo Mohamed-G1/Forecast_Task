@@ -69,7 +69,6 @@ private fun ForecastScreenContent(
             .padding(16.dp)
     ) {
         CitiesDropDownMenu(
-            cityName = state.weatherData?.city?.name.orEmpty(),
             citiesList = citiesList,
             onSearchClicked = { city ->
                 event.invoke(

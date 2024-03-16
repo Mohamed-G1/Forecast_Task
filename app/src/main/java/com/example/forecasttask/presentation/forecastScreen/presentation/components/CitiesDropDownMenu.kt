@@ -36,7 +36,6 @@ import com.example.forecasttask.presentation.forecastScreen.domian.model.CitiesM
 @Composable
 fun CitiesDropDownMenu(
     citiesList: List<CitiesModel>,
-    cityName : String,
     onSearchClicked: (CitiesModel) -> Unit,
     onCityChanged : (CitiesModel) -> Unit,
 ) {
@@ -78,7 +77,7 @@ fun CitiesDropDownMenu(
                 Spacer(modifier = Modifier.width(16.dp))
 
                 Text(
-                    text = selectedCityModel.copy(cityNameEn = cityName).cityNameEn,
+                    text = selectedCityModel.cityNameEn,
                     modifier = Modifier
                         .weight(1f)
 
@@ -120,6 +119,6 @@ fun CitiesDropDownMenu(
 @Composable
 fun CitiesDropDownMenuPrvivew() {
     CitiesDropDownMenu(
-        listOf(),"",{},{}
+        listOf(),{},{}
     )
 }
